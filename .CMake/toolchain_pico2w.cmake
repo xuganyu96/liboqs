@@ -7,14 +7,13 @@
 # fact that Pico is a 32-bit system. I am not sure how to troubleshoot this. For now I will just avoid
 # using SPHINCS.
 
-# TODO: is Linux really correct?
-set(CMAKE_SYSTEM_NAME Linux)
-# TODO: what does pico-sdk say?
-set(CMAKE_SYSTEM_PROCESSOR arm32v7)
+set(CMAKE_SYSTEM_NAME PICO)
+set(CMAKE_SYSTEM_PROCESSOR cortex-m33)
 set(CMAKE_CROSSCOMPILING ON)
 
 # set(CMAKE_C_COMPILER arm-none-eabi-gcc --specs=nosys.specs)
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp")
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
