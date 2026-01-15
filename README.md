@@ -1,3 +1,5 @@
+For interview candidates, check the [`interview/`](./interview) directory for instructions.
+
 liboqs
 ======================
 
