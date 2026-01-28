@@ -12,8 +12,8 @@ Some jobs in our latest GitHub Actions workflow recently started failing. You ar
 Your task is to review the logs, identify the root cause of the failures, and propose a fix. Implementing the fix is desirable but not required.
 
 Notes:
-- For bonus points, identify the commit that caused the test failures and propose measures to prevent future occurrences
-- LLM Usage: You are welcome to use LLMs to help interpret logs or brainstorm solutions. If you do, please include a brief note in your summary about how you used them.
-- Time limit suggestion: You are expected to finish in no more than 4 hours.
-- We will follow up with an interview where you will present your findings. Be prepared to walk us through your "debugging trail" and explain why you chose your specific fix.
-
+- Time limit suggestion: We do not want you to spend more than 3 hours on this exercise. We are more interested in your thought process and approach then a fully worked solution.
+- During the interview we will ask you to present your findings. Be prepared to walk us through your "debugging trail" and explain why you chose your specific fix.
+- It is okay if you do not set up the code to build locally, and focus your attention solely on reading source code.
+- Bonus: identify the commit that caused the test failures and propose measures to prevent future occurrences.
+- LLM Usage: You are welcome to use LLMs to help interpret logs or brainstorm solutions. If you do, please briefly tell us about how you used them.
