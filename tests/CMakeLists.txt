@@ -246,6 +246,10 @@ if (CMAKE_GENERATOR MATCHES "Visual Studio")
         RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL     "${CMAKE_BINARY_DIR}/tests")
 endif()
 
+# KEM API tests
+add_executable(oqscli oqscli.c)
+target_link_libraries(oqscli PRIVATE ${TEST_DEPS})
+
 # TODO: Get CMake to find python.
 # and set PATH variable in Windows
 # for DLL builds.
