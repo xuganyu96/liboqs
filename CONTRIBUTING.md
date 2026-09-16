@@ -25,8 +25,8 @@ particularly in case of possible bugs or new feature requests or create a
 Pull requests should clearly state their purpose, possibly referencing an existing
 [issue](https://github.com/open-quantum-safe/liboqs/issues) when resolving it.
 
-Pull requests containing code, documentation, or text produced with the help of generative AI must declare that in the pull request description and describe the nature of the use. Contributors are expected to have verified and affirm such contributions themselves before submission.
-Contributors using AI assistants are encouraged to read the OpenSSF's [Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions).
+Contributions made with generative AI must follow the [AI Policy](#ai-policy),
+including its disclosure and commit trailer requirements.
 
 All PRs should move to "Ready for Review" stage only if all CI tests pass (are green).
 
@@ -107,6 +107,76 @@ act workflow_call -W '.github/workflows/basic.yml'
 
 Any PR introducing a new feature is expected to contain a test of this feature
 and this test should be part of the CI pipeline.
+
+## AI Policy
+
+AI-assisted contributions, including work performed by AI agents, are welcome.
+All contributions must meet the same quality standards, and contributors remain
+responsible for everything they submit. Maintainers may request clarification
+or close submissions that do not comply with this policy.
+
+### Disclosure
+
+Contributions containing code, documentation, or other text produced with the
+help of generative AI must disclose that use in the pull request description.
+Identify the tools used, explain how they were used, and identify the affected
+files or sections. The same disclosure requirement applies to issues and
+security reports, including AI-assisted investigation and permitted translation
+or grammar edits. Follow the communication rules below when writing these
+descriptions and reports.
+
+For each commit containing AI-assisted changes, add an
+`Assisted-By: <tool>:<model>` trailer after a blank line at the end of the commit
+message. For example:
+
+```text
+Assisted-By: claude-code:claude-sonnet-4-5
+Assisted-By: cursor:unknown
+```
+
+Use the model identifier reported by the tool, or `unknown` if unavailable.
+Add one trailer per tool/model combination and preserve them when rebasing or
+squashing. Use `Assisted-By` instead of `Co-Authored-By` for all AI contributions;
+reserve `Co-Authored-By` for human co-authors.
+
+Trailers supplement the PR disclosure. AI use limited to the PR description
+requires disclosure there, but no trailer on otherwise unaided commits.
+
+### Responsibility
+
+Contributors must review and verify all AI-assisted contributions before
+submission, including running appropriate tests for code changes. They must
+understand and be able to explain their changes and the existing code relevant
+to those changes. Maintainers may reject submissions that contributors cannot
+explain or substantiate.
+
+### Communication
+
+Write pull request descriptions, issue descriptions, security reports, and
+discussion or review comments yourself. AI may be used to translate or correct
+the grammar of your own text, but not to generate its substance. Review any
+such edits to ensure that they preserve your meaning and voice. When using AI
+for translation, consider including your original text followed by the
+translation in a block quote, labelled as an AI translation.
+
+This restriction applies to communication with maintainers; AI-assisted source
+code comments and project documentation are permitted under the disclosure and
+verification requirements above.
+
+### Licensing
+
+Contributors are responsible for ensuring that AI-assisted contributions comply
+with applicable copyright and licensing requirements, including any required
+attribution and license notices.
+
+### Security
+
+Follow [SECURITY.md](SECURITY.md) when reporting potential vulnerabilities.
+Security researchers and automated agents should also follow
+[.github/AGENTS.md](.github/AGENTS.md) and consult the
+[threat model](.github/THREAT_MODEL.md) for investigation and reporting guidance.
+Contributors using AI assistants are encouraged to read OpenSSF's
+[Security-Focused Guide for AI Code Assistant Instructions](https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions).
 
 ## Failsafe
 
