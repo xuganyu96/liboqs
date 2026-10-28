@@ -1,0 +1,1244 @@
+========== MQOM CAT5 GF16 Short CT MEMOPT ==========
+--------------------------------------------------------------------------------
+Command:            ./build_memopt/tests/test_sig mqom3_cat5_gf16_short_ct 0 0 0
+Massif arguments:   --stacks=yes --time-unit=B --massif-out-file=./build_memopt/test_sig_mqom3_cat5_gf16_short_ct
+ms_print arguments: build_memopt/test_sig_mqom3_cat5_gf16_short_ct
+--------------------------------------------------------------------------------
+
+
+    KB
+53.82^                                                         #              
+     |                                                         #::            
+     |                                                         #::           :
+     |                                                         #::           :
+     |                                                         #::           :
+     |                                                         #::           :
+     | @:: :::@@  ::@:  :: : ::::::@ :@@:  :::   ::::::  :::@::#::           :
+     | @::::::@ ::::@:::::@:@:: :: @::@ ::::::@:::::: ::::::@::#::           :
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+     | @::::::@ : ::@:::::@:@:: :: @::@ ::::::@: :::: :: :::@::#::::::@:::::@:
+   0 +----------------------------------------------------------------------->MB
+     0                                                                   325.0
+
+Number of snapshots: 84
+ Detailed snapshots: [1, 8, 13, 19, 21, 27, 31, 39, 55, 60, 61 (peak), 71, 81]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      5,617,984           40,256           14,136            96       26,024
+35.12% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.57% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->30.21% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->30.21% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.36% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.54% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.54% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.54% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.54% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.54% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.54% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.54% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.54% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.54% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.54% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.54% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2     12,905,032           40,216           14,136            96       25,984
+  3     18,348,192           38,688           14,136            96       24,456
+  4     21,873,104           38,320           14,136            96       24,088
+  5     26,662,328           40,072           14,136            96       25,840
+  6     33,055,376           39,632           14,136            96       25,400
+  7     36,756,008           38,680           14,136            96       24,448
+  8     42,478,568           38,712           14,136            96       24,480
+36.52% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.87% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.42% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.42% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.45% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.65% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.65% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.65% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.65% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.65% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.65% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.65% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.65% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.65% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.65% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.65% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  9     48,879,344           38,320           14,136            96       24,088
+ 10     51,911,056           38,320           14,136            96       24,088
+ 11     57,301,064           40,056           14,136            96       25,824
+ 12     63,360,104           40,072           14,136            96       25,840
+ 13     68,072,136           38,728           14,136            96       24,496
+36.50% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.86% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.40% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.40% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.45% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.64% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.64% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.64% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.64% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.64% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.64% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.64% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.64% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.64% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.64% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.64% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 14     72,784,568           38,680           14,136            96       24,448
+ 15     76,824,144           38,256           14,136            96       24,024
+ 16     82,883,200           38,320           14,136            96       24,088
+ 17     87,596,784           39,696           14,136            96       25,464
+ 18     90,963,016           38,696           14,136            96       24,464
+ 19     97,020,288           38,320           14,136            96       24,088
+36.89% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.22% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.74% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.74% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.48% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.67% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.67% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.67% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.67% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.67% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.67% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.67% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.67% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.67% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.67% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.67% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 20    102,067,464           38,680           14,136            96       24,448
+ 21    107,114,400           38,320           14,136            96       24,088
+36.89% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.22% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.74% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.74% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.48% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.67% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.67% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.67% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.67% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.67% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.67% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.67% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.67% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.67% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.67% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.67% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22    111,152,144           39,632           14,136            96       25,400
+ 23    118,218,424           40,056           14,136            96       25,824
+ 24    123,265,280           38,688           14,136            96       24,456
+ 25    129,321,888           38,848           14,136            96       24,616
+ 26    132,350,200           38,680           14,136            96       24,448
+ 27    137,396,984           38,728           14,136            96       24,496
+36.50% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.86% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.40% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.40% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.45% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.64% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.64% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.64% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.64% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.64% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.64% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.64% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.64% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.64% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.64% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.64% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28    141,434,440           38,712           14,136            96       24,480
+ 29    145,441,216           38,256           14,136            96       24,024
+ 30    149,447,720           40,056           14,136            96       25,824
+ 31    153,454,152           40,056           14,136            96       25,824
+35.29% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.73% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->30.36% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->30.36% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.37% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.56% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.56% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.56% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.56% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.56% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.56% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.56% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.56% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.56% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.56% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.56% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32    161,466,760           38,696           14,136            96       24,464
+ 33    167,476,576           38,320           14,136            96       24,088
+ 34    171,482,992           38,320           14,136            96       24,088
+ 35    177,492,664           40,056           14,136            96       25,824
+ 36    181,498,968           40,072           14,136            96       25,840
+ 37    185,505,288           40,248           14,136            96       26,016
+ 38    189,512,112           38,320           14,136            96       24,088
+ 39    193,518,512           38,256           14,136            96       24,024
+36.95% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.27% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->31.79% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->31.79% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.48% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.68% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.68% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.68% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.68% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.68% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.68% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.68% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.68% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.68% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.68% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.68% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40    197,524,976           38,320           14,136            96       24,088
+ 41    203,534,440           38,680           14,136            96       24,448
+ 42    207,540,840           38,728           14,136            96       24,496
+ 43    211,547,304           38,840           14,136            96       24,608
+ 44    215,554,568           40,056           14,136            96       25,824
+ 45    219,561,128           40,216           14,136            96       25,984
+ 46    227,573,736           38,696           14,136            96       24,464
+ 47    231,580,160           38,320           14,136            96       24,088
+ 48    235,586,496           38,320           14,136            96       24,088
+ 49    241,596,232           38,680           14,136            96       24,448
+ 50    244,624,544           38,688           14,136            96       24,456
+ 51    247,653,112           38,680           14,136            96       24,448
+ 52    250,681,512           38,680           14,136            96       24,448
+ 53    253,709,824           38,688           14,136            96       24,456
+ 54    256,738,296           38,680           14,136            96       24,448
+ 55    259,766,808           40,056           14,136            96       25,824
+35.29% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.73% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->30.36% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->30.36% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.37% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.56% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.56% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.56% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.56% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.56% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.56% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.56% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.56% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.56% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.56% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.56% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56    262,795,160           38,680           14,136            96       24,448
+ 57    265,823,560           40,056           14,136            96       25,824
+ 58    268,852,056           38,680           14,136            96       24,448
+ 59    271,880,488           38,680           14,136            96       24,448
+ 60    274,114,008           54,520           13,880            88       40,552
+25.46% (13,880B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->23.58% (12,856B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->22.31% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->22.31% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.27% (694B) in 5 places, all below massif's threshold (1.00%)
+|   
+->01.88% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->01.88% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->01.88% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->01.88% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->01.88% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->01.88% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->01.88% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->01.88% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->01.88% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->01.88% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->01.88% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61    274,114,680           55,112           14,136            96       40,880
+25.65% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->23.79% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->22.07% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->22.07% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.72% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->01.86% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->01.86% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->01.86% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->01.86% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->01.86% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->01.86% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->01.86% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->01.86% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->01.86% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->01.86% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->01.86% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62    277,143,008           54,768           13,880            88       40,800
+ 63    280,171,528           54,568           13,880            88       40,600
+ 64    283,199,848           34,856           14,136            96       20,624
+ 65    286,228,336           34,784           14,136            96       20,552
+ 66    289,256,648           34,856           14,136            96       20,624
+ 67    292,284,960           34,848           14,136            96       20,616
+ 68    295,313,272           35,768           14,136            96       21,536
+ 69    298,342,288           34,784           14,136            96       20,552
+ 70    301,370,616           34,904           14,136            96       20,672
+ 71    304,398,936           34,856           14,136            96       20,624
+40.56% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.62% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->34.89% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->34.89% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.73% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.94% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.94% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.94% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.94% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.94% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.94% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.94% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.94% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.94% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.94% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.94% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 72    307,427,272           35,768           14,136            96       21,536
+ 73    310,455,608           34,856           14,136            96       20,624
+ 74    313,483,920           34,848           14,136            96       20,616
+ 75    316,512,232           35,688           14,136            96       21,456
+ 76    319,540,552           35,816           14,136            96       21,584
+ 77    322,568,864           34,832           14,136            96       20,600
+ 78    325,597,208           34,904           14,136            96       20,672
+ 79    328,625,520           35,744           14,136            96       21,512
+ 80    331,653,848           35,816           14,136            96       21,584
+ 81    334,682,200           34,904           14,136            96       20,672
+40.50% (14,136B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.57% (13,112B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->34.84% (12,162B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->34.84% (12,162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->02.72% (950B) in 5 places, all below massif's threshold (1.00%)
+|   
+->02.93% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->02.93% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->02.93% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->02.93% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->02.93% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->02.93% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->02.93% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->02.93% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->02.93% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->02.93% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->02.93% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 82    337,710,616           51,432           13,880            88       37,464
+ 83    340,738,928           51,584           13,880            88       37,616
+========== MQOM CAT5 GF16 Short CT REF    ==========
+--------------------------------------------------------------------------------
+Command:            ./build_ref/tests/test_sig mqom3_cat5_gf16_short_ct 0 0 0
+Massif arguments:   --stacks=yes --time-unit=B --massif-out-file=./build_ref/test_sig_mqom3_cat5_gf16_short_ct
+ms_print arguments: build_ref/test_sig_mqom3_cat5_gf16_short_ct
+--------------------------------------------------------------------------------
+
+
+    MB
+7.301^                                 #                                      
+     |                                 #                                      
+     |                                 #                                      
+     |       :::@:::::::@::::::::::::::#:::::                                 
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     |       :::@:: ::: @ :::::::::::::#:                                     
+     | :     :::@:: ::: @ :::::::::::::#:                                   : 
+     | :     :::@:: ::: @ :::::::::::::#:     ::::::@:::::::@@::::::@:::::@:: 
+   0 +----------------------------------------------------------------------->MB
+     0                                                                   89.81
+
+Number of snapshots: 65
+ Detailed snapshots: [7, 14, 29 (peak), 36, 43, 50, 60]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        989,760           22,384           18,448           112        3,824
+  2      2,189,936        1,076,656        1,070,648           104        5,904
+  3      3,291,184           28,992           13,880            88       15,024
+  4      9,848,968        6,586,776        6,568,280         3,328       15,168
+  5     10,622,832        6,661,008        6,635,400         3,344       22,264
+  6     12,281,872        6,659,648        6,635,400         3,344       20,904
+  7     13,701,696        6,659,648        6,635,400         3,344       20,904
+99.64% (6,635,400B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.62% (6,634,376B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->98.42% (6,554,400B) 0x40A59A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Sign_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->98.42% (6,554,400B) 0x408C8F: oqs_sig_pubapi_mqom3_cat5_gf16_short_ct_avx2_crypto_sign_signature (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->98.42% (6,554,400B) 0x4042C2: OQS_SIG_sign (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->98.42% (6,554,400B) 0x4013DE: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->98.42% (6,554,400B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.20% (79,976B) in 10 places, all below massif's threshold (1.00%)
+|   
+->00.02% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8     14,951,888        6,659,600        6,635,400         3,344       20,856
+  9     16,880,328        6,661,000        6,635,400         3,344       22,256
+ 10     18,442,704        6,659,648        6,635,400         3,344       20,904
+ 11     19,483,648        6,659,648        6,635,400         3,344       20,904
+ 12     20,732,280        6,661,000        6,635,400         3,344       22,256
+ 13     22,189,248        6,659,616        6,635,400         3,344       20,872
+ 14     23,596,128        6,659,648        6,635,400         3,344       20,904
+99.64% (6,635,400B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.62% (6,634,376B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->98.42% (6,554,400B) 0x40A59A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Sign_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->98.42% (6,554,400B) 0x408C8F: oqs_sig_pubapi_mqom3_cat5_gf16_short_ct_avx2_crypto_sign_signature (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->98.42% (6,554,400B) 0x4042C2: OQS_SIG_sign (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->98.42% (6,554,400B) 0x4013DE: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->98.42% (6,554,400B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.20% (79,976B) in 10 places, all below massif's threshold (1.00%)
+|   
+->00.02% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15     24,742,720        6,659,600        6,635,400         3,344       20,856
+ 16     26,461,976        6,661,000        6,635,400         3,344       22,256
+ 17     27,710,592        6,659,648        6,635,400         3,344       20,904
+ 18     29,063,848        6,661,000        6,635,400         3,344       22,256
+ 19     30,681,440        6,660,576        6,636,264         3,352       20,960
+ 20     31,672,864        6,660,576        6,636,264         3,352       20,960
+ 21     33,343,264        6,660,576        6,636,264         3,352       20,960
+ 22     34,700,232        6,661,592        6,636,264         3,352       21,976
+ 23     36,056,912        6,660,576        6,636,264         3,352       20,960
+ 24     37,727,312        6,660,576        6,636,264         3,352       20,960
+ 25     39,031,936        6,660,576        6,636,264         3,352       20,960
+ 26     39,919,480        6,661,592        6,636,264         3,352       21,976
+ 27     41,380,560        6,660,576        6,636,264         3,352       20,960
+ 28     42,796,312        6,592,552        6,568,280         3,328       20,944
+ 29     43,871,384        7,655,432        7,625,304         3,344       26,784
+99.61% (7,625,304B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->99.59% (7,624,280B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->85.62% (6,554,400B) 0x40A59A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Sign_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->85.62% (6,554,400B) 0x408C8F: oqs_sig_pubapi_mqom3_cat5_gf16_short_ct_avx2_crypto_sign_signature (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->85.62% (6,554,400B) 0x4042C2: OQS_SIG_sign (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->85.62% (6,554,400B) 0x4013DE: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->85.62% (6,554,400B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->13.70% (1,048,576B) 0x4EB8E9: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_ComputePAlpha_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->13.70% (1,048,576B) 0x40A8B3: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Sign_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->13.70% (1,048,576B) 0x408C8F: oqs_sig_pubapi_mqom3_cat5_gf16_short_ct_avx2_crypto_sign_signature (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->13.70% (1,048,576B) 0x4042C2: OQS_SIG_sign (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->13.70% (1,048,576B) 0x4013DE: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         ->13.70% (1,048,576B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |           
+| ->00.28% (21,304B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.01% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 30     45,204,912        6,606,544        6,576,472         3,336       26,736
+ 31     51,805,192           29,352           14,136            96       15,120
+ 32     53,368,216          626,536          605,288           112       21,136
+ 33     55,313,776          625,216          605,288           112       19,816
+ 34     57,398,936          621,432          606,152           120       15,160
+ 35     58,978,408          621,256          605,288           112       15,856
+ 36     61,064,080          625,216          605,288           112       19,816
+96.81% (605,288B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->96.65% (604,264B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->83.86% (524,288B) 0x4E9794: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->83.86% (524,288B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->83.86% (524,288B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->83.86% (524,288B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->83.86% (524,288B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->10.48% (65,536B) 0x4E977A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->10.48% (65,536B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->10.48% (65,536B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->10.48% (65,536B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->10.48% (65,536B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.95% (12,162B) 0x40129B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->01.95% (12,162B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   
+| ->00.36% (2,278B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.16% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37     62,106,968          626,536          605,288           112       21,136
+ 38     63,670,504          621,432          606,152           120       15,160
+ 39     65,263,880          621,256          605,288           112       15,856
+ 40     67,349,456          625,216          605,288           112       19,816
+ 41     68,392,376          626,536          605,288           112       21,136
+ 42     69,955,912          621,432          606,152           120       15,160
+ 43     71,549,272          621,256          605,288           112       15,856
+97.43% (605,288B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.26% (604,264B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->84.39% (524,288B) 0x4E9794: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->84.39% (524,288B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->84.39% (524,288B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->84.39% (524,288B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->84.39% (524,288B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->10.55% (65,536B) 0x4E977A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->10.55% (65,536B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->10.55% (65,536B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->10.55% (65,536B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->10.55% (65,536B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.96% (12,162B) 0x40129B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->01.96% (12,162B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   
+| ->00.37% (2,278B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.16% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 44     73,634,960          625,216          605,288           112       19,816
+ 45     74,677,912          626,536          605,288           112       21,136
+ 46     76,241,448          621,432          606,152           120       15,160
+ 47     77,834,840          621,256          605,288           112       15,856
+ 48     79,920,496          625,216          605,288           112       19,816
+ 49     81,484,488          626,536          605,288           112       21,136
+ 50     82,258,856          622,456          606,152           120       16,184
+97.38% (606,152B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.22% (605,128B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->84.23% (524,288B) 0x4E9794: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->84.23% (524,288B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->84.23% (524,288B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->84.23% (524,288B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->84.23% (524,288B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->10.53% (65,536B) 0x4E977A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->10.53% (65,536B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->10.53% (65,536B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->10.53% (65,536B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->10.53% (65,536B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.95% (12,162B) 0x40129B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->01.95% (12,162B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   
+| ->00.50% (3,142B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.16% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51     83,032,720          621,440          606,152           120       15,168
+ 52     83,807,312          621,440          606,152           120       15,168
+ 53     84,581,824          625,216          605,288           112       19,816
+ 54     85,355,736          626,536          605,288           112       21,136
+ 55     86,140,984          621,256          605,288           112       15,856
+ 56     87,019,248          752,384          736,360           120       15,904
+ 57     87,794,064          625,216          605,288           112       19,816
+ 58     88,568,624          621,440          606,152           120       15,168
+ 59     89,342,488          622,456          606,152           120       16,184
+ 60     90,116,352          621,440          606,152           120       15,168
+97.54% (606,152B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.38% (605,128B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->84.37% (524,288B) 0x4E9794: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->84.37% (524,288B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->84.37% (524,288B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->84.37% (524,288B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->84.37% (524,288B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->10.55% (65,536B) 0x4E977A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_CT_BLC_Eval_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->10.55% (65,536B) 0x40B32A: oqs_sig_private_mqom3_cat5_gf16_short_ct_avx2_Verify_default (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   ->10.55% (65,536B) 0x404352: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |     ->10.55% (65,536B) 0x4013FF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |       ->10.55% (65,536B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |         
+| ->01.96% (12,162B) 0x40129B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| | ->01.96% (12,162B) 0x400D0A: main (in /home/brucexu/Workspace/liboqs/build_ref/tests/test_sig)
+| |   
+| ->00.51% (3,142B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.16% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61     90,891,496          626,536          605,288           112       21,136
+ 62     91,792,992           29,120           13,880            88       15,152
+ 63     92,854,488        1,089,144        1,062,456            96       26,592
+ 64     94,176,888           48,712           22,072            96       26,544
+========== SNOVA V K MEMOPT               ==========
+--------------------------------------------------------------------------------
+Command:            ./build_memopt/tests/test_sig SNOVA_V_K 0 0 0
+Massif arguments:   --stacks=yes --time-unit=B --massif-out-file=./build_memopt/test_sig_SNOVA_V_K
+ms_print arguments: build_memopt/test_sig_SNOVA_V_K
+--------------------------------------------------------------------------------
+
+
+    KB
+100.3^                              ::   :    :                               
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@                     
+     |                              # :@::::::::::::::::@:::::@::::::@:::::@::
+     |                              # :@::::::::::::::::@:::::@::::::@:::::@::
+     |         :::::::@::::::::::@::# :@::::::::::::::::@:::::@::::::@:::::@::
+     |        :: :::::@::::::::::@: # :@::::::::::::::::@:::::@::::::@:::::@::
+   0 +----------------------------------------------------------------------->MB
+     0                                                                   7.598
+
+Number of snapshots: 93
+ Detailed snapshots: [5, 15, 28, 31 (peak), 35, 58, 68, 78, 88]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        132,176            1,728                0             0        1,728
+  2        225,344            1,248                0             0        1,248
+  3        377,552            1,792                0             0        1,792
+  4        495,296            1,536                0             0        1,536
+  5        622,528            1,296                0             0        1,296
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6        773,256            4,360            1,024             8        3,328
+  7        909,792            6,256            1,112            24        5,120
+  8      1,027,576           14,888            3,924            84       10,880
+  9      1,101,312           14,672            3,668            76       10,928
+ 10      1,231,696           14,848            3,924            84       10,840
+ 11      1,376,696           14,936            3,924            84       10,928
+ 12      1,492,616           14,936            3,924            84       10,928
+ 13      1,608,536           14,936            3,924            84       10,928
+ 14      1,724,456           14,936            3,924            84       10,928
+ 15      1,813,792           14,848            3,924            84       10,840
+26.43% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.53% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->08.61% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->08.61% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->06.45% (958B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->06.45% (958B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.72% (256B) 0x402BD2: OQS_MEM_aligned_alloc (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.72% (256B) 0x405317: SHA3_shake128_inc_init (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | | ->01.72% (256B) 0x425B34: snova_pk_expand_block (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   ->01.72% (256B) 0x42630D: _SNOVA_V_K_memopt_genkeys (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   | ->01.72% (256B) 0x406796: _SNOVA_V_K_memopt_oqs_keypair (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |   ->01.72% (256B) 0x404249: OQS_SIG_keypair (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |     ->01.72% (256B) 0x40138C: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |       ->01.72% (256B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |         
+| | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | |   
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->01.09% (162B) 0x401256: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.09% (162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.06% (158B) 0x401246: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.06% (158B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->00.59% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.90% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->06.90% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->06.90% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->06.90% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->06.90% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->06.90% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->06.90% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->06.90% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->06.90% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->06.90% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->06.90% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 16      1,905,736           15,048            3,924            84       11,040
+ 17      1,998,472           15,048            3,924            84       11,040
+ 18      2,114,408           15,048            3,924            84       11,040
+ 19      2,207,144           15,048            3,924            84       11,040
+ 20      2,299,880           15,048            3,924            84       11,040
+ 21      2,392,616           15,048            3,924            84       11,040
+ 22      2,485,368           15,048            3,924            84       11,040
+ 23      2,578,104           15,048            3,924            84       11,040
+ 24      2,670,840           15,048            3,924            84       11,040
+ 25      2,763,576           15,048            3,924            84       11,040
+ 26      2,833,144           15,048            3,924            84       11,040
+ 27      2,925,880           15,048            3,924            84       11,040
+ 28      3,004,152           14,872            3,924            84       10,864
+26.39% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.50% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->08.59% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->08.59% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->06.44% (958B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->06.44% (958B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.72% (256B) 0x402BD2: OQS_MEM_aligned_alloc (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.72% (256B) 0x405317: SHA3_shake128_inc_init (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | | ->01.72% (256B) 0x425B34: snova_pk_expand_block (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   ->01.72% (256B) 0x42630D: _SNOVA_V_K_memopt_genkeys (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   | ->01.72% (256B) 0x406796: _SNOVA_V_K_memopt_oqs_keypair (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |   ->01.72% (256B) 0x404249: OQS_SIG_keypair (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |     ->01.72% (256B) 0x40138C: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |       ->01.72% (256B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | |   |         
+| | |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | |   
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->01.09% (162B) 0x401256: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.09% (162B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.06% (158B) 0x401246: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->01.06% (158B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->00.59% (88B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.89% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->06.89% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->06.89% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->06.89% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->06.89% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->06.89% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->06.89% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->06.89% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->06.89% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->06.89% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->06.89% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29      3,082,432           14,576            3,668            76       10,832
+ 30      3,199,928           14,872            3,924            84       10,864
+ 31      3,322,184          102,616            3,924            84       98,608
+03.82% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.83% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->01.58% (1,622B) in 5 places, all below massif's threshold (1.00%)
+| | 
+| ->01.25% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.25% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     
+->01.00% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32      3,400,680          102,664            3,924            84       98,656
+ 33      3,557,224          102,472            3,924            84       98,464
+ 34      3,635,496          102,488            3,924            84       98,480
+ 35      3,713,784          102,504            3,924            84       98,496
+03.83% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.83% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->01.58% (1,622B) in 5 places, all below massif's threshold (1.00%)
+| | 
+| ->01.25% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.25% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     
+->01.00% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36      3,792,224          102,288            3,668            76       98,544
+ 37      3,909,848          102,664            3,924            84       98,656
+ 38      4,066,392          102,456            3,924            84       98,448
+ 39      4,144,664          102,472            3,924            84       98,464
+ 40      4,222,936          102,472            3,924            84       98,464
+ 41      4,301,208          102,552            3,924            84       98,544
+ 42      4,379,568          102,160            3,668            76       98,416
+ 43      4,458,136          102,664            3,924            84       98,656
+ 44      4,536,408          102,472            3,924            84       98,464
+ 45      4,614,680          102,488            3,924            84       98,480
+ 46      4,692,952          102,504            3,924            84       98,496
+ 47      4,771,224          102,504            3,924            84       98,496
+ 48      4,849,760          102,288            3,668            76       98,544
+ 49      4,928,032          102,288            3,668            76       98,544
+ 50      4,997,792          102,288            3,668            76       98,544
+ 51      5,067,384          102,504            3,924            84       98,496
+ 52      5,136,952          102,456            3,924            84       98,448
+ 53      5,206,520          102,488            3,924            84       98,480
+ 54      5,276,088          102,280            3,668            76       98,536
+ 55      5,345,904          102,288            3,668            76       98,544
+ 56      5,415,496          102,504            3,924            84       98,496
+ 57      5,485,064          102,456            3,924            84       98,448
+ 58      5,554,632          102,504            3,924            84       98,496
+03.83% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.83% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->01.58% (1,622B) in 5 places, all below massif's threshold (1.00%)
+| | 
+| ->01.25% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.25% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     
+->01.00% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 59      5,671,096            8,216            3,668            76        4,472
+ 60      5,740,664           25,368            3,924            84       21,360
+ 61      5,810,232           25,384            3,924            84       21,376
+ 62      5,879,800           25,352            3,924            84       21,344
+ 63      5,949,560           25,544            3,924            84       21,536
+ 64      6,019,128           25,032            3,668            76       21,288
+ 65      6,088,696           25,352            3,924            84       21,344
+ 66      6,158,264           25,352            3,924            84       21,344
+ 67      6,227,832           25,384            3,924            84       21,376
+ 68      6,297,416           25,544            3,924            84       21,536
+15.36% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->11.35% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->05.00% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->05.00% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->03.75% (958B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->03.75% (958B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.60% (408B) in 3 places, all below massif's threshold (1.00%)
+| | 
+| ->01.00% (256B) 0x402BD2: OQS_MEM_aligned_alloc (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.00% (256B) 0x405317: SHA3_shake128_inc_init (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   | ->01.00% (256B) 0x425B34: snova_pk_expand_block (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   ->01.00% (256B) 0x43616C: _SNOVA_V_K_memopt_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   | ->01.00% (256B) 0x4068F8: _SNOVA_V_K_memopt_oqs_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |   ->01.00% (256B) 0x404312: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |     ->01.00% (256B) 0x4013CF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |       ->01.00% (256B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |         
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->04.01% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->04.01% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->04.01% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->04.01% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->04.01% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->04.01% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->04.01% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->04.01% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->04.01% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->04.01% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->04.01% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 69      6,366,992           25,136            3,668            76       21,392
+ 70      6,436,560           25,344            3,924            84       21,336
+ 71      6,506,128           25,360            3,924            84       21,352
+ 72      6,575,696           25,392            3,924            84       21,384
+ 73      6,645,272           25,544            3,924            84       21,536
+ 74      6,714,848           25,136            3,668            76       21,392
+ 75      6,784,416           25,344            3,924            84       21,336
+ 76      6,853,984           25,344            3,924            84       21,336
+ 77      6,923,552           25,392            3,924            84       21,384
+ 78      6,993,128           25,544            3,924            84       21,536
+15.36% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->11.35% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->05.00% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->05.00% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->03.75% (958B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->03.75% (958B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.60% (408B) in 3 places, all below massif's threshold (1.00%)
+| | 
+| ->01.00% (256B) 0x402BD2: OQS_MEM_aligned_alloc (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.00% (256B) 0x405317: SHA3_shake128_inc_init (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   | ->01.00% (256B) 0x425B34: snova_pk_expand_block (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   ->01.00% (256B) 0x43616C: _SNOVA_V_K_memopt_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   | ->01.00% (256B) 0x4068F8: _SNOVA_V_K_memopt_oqs_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |   ->01.00% (256B) 0x404312: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |     ->01.00% (256B) 0x4013CF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |       ->01.00% (256B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |         
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->04.01% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->04.01% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->04.01% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->04.01% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->04.01% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->04.01% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->04.01% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->04.01% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->04.01% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->04.01% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->04.01% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 79      7,062,704           25,136            3,668            76       21,392
+ 80      7,132,280           25,432            3,924            84       21,424
+ 81      7,201,848           25,352            3,924            84       21,344
+ 82      7,271,416           25,384            3,924            84       21,376
+ 83      7,340,984           25,544            3,924            84       21,536
+ 84      7,410,560           25,136            3,668            76       21,392
+ 85      7,480,272           25,168            3,668            76       21,424
+ 86      7,549,840           25,344            3,924            84       21,336
+ 87      7,619,416           25,368            3,924            84       21,360
+ 88      7,688,984           25,400            3,924            84       21,392
+15.45% (3,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->11.42% (2,900B) 0x4AC05ED: CRYPTO_malloc (mem.c:213)
+| ->05.03% (1,278B) 0x401231: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->05.03% (1,278B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->03.77% (958B) 0x40126B: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| | ->03.77% (958B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+| |   
+| ->01.61% (408B) in 3 places, all below massif's threshold (1.00%)
+| | 
+| ->01.01% (256B) 0x402BD2: OQS_MEM_aligned_alloc (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   ->01.01% (256B) 0x405317: SHA3_shake128_inc_init (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   | ->01.01% (256B) 0x425B34: snova_pk_expand_block (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   ->01.01% (256B) 0x43616C: _SNOVA_V_K_memopt_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   | ->01.01% (256B) 0x4068F8: _SNOVA_V_K_memopt_oqs_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |   ->01.01% (256B) 0x404312: OQS_SIG_verify (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |     ->01.01% (256B) 0x4013CF: sig_test_correctness (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |       ->01.01% (256B) 0x400CDA: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|   |   |         
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->04.03% (1,024B) 0x4F41FC2: _IO_file_doallocate (filedoalloc.c:91)
+| ->04.03% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:373)
+|   ->04.03% (1,024B) 0x4F524D5: _IO_doallocbuf (genops.c:368)
+|     ->04.03% (1,024B) 0x4F502D8: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:781)
+|     | ->04.03% (1,024B) 0x4F50FA7: _IO_new_file_xsputn (fileops.c:1307)
+|     |   ->04.03% (1,024B) 0x4F50FA7: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1260)
+|     |     ->04.03% (1,024B) 0x4F1D295: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|     |       ->04.03% (1,024B) 0x4F1D37B: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|     |         ->04.03% (1,024B) 0x4F28C4F: __vfprintf_internal (vfprintf-internal.c:1549)
+|     |           ->04.03% (1,024B) 0x4F1CA42: printf (printf.c:33)
+|     |             ->04.03% (1,024B) 0x400716: main (in /home/brucexu/Workspace/liboqs/build_memopt/tests/test_sig)
+|     |               
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 89      7,758,560           25,280            3,668            76       21,536
+ 90      7,828,128           25,168            3,668            76       21,424
+ 91      7,897,696           25,344            3,924            84       21,336
+ 92      7,967,344            5,760            2,232            56        3,472
+========== SNOVA V K REF                  ==========
+--------------------------------------------------------------------------------
+Command:            ./build_ref/tests/test_sig SNOVA_V_K 0 0 0
+Massif arguments:   --stacks=yes --time-unit=B --massif-out-file=./build_ref/test_sig_SNOVA_V_K
+ms_print arguments: build_ref/test_sig_SNOVA_V_K
+--------------------------------------------------------------------------------
+
+
+    MB
+0.978^             #                                                          
+     |             #::::::::                                                  
+     |             #::::::::                      @@@                         
+     |           ::#::::::::@@@@@@                @                           
+     |           ::#::::::::@                     @                           
+     |           ::#::::::::@                     @            ::::::@:::     
+     |           ::#::::::::@                     @            : ::::@:::     
+     |           ::#::::::::@                     @            : ::::@:::     
+     |           ::#::::::::@                     @            @ ::::@:::::   
+     |           ::#::::::::@                     @    :       @ ::::@::::    
+     |           ::#::::::::@        ::::::::::   @    :       @ ::::@::::    
+     |           ::#::::::::@        ::::::::::   @    :       @ ::::@::::    
+     |           ::#::::::::@        ::::::::::   @    :       @ ::::@::::    
+     |           ::#::::::::@       ::::::::::::::@  :::::     @ ::::@::::    
+     |           ::#::::::::@       ::::::::::::  @  : ::    ::@ ::::@:::: :: 
+     |           ::#::::::::@       ::::::::::::  @  : ::    : @ ::::@:::: :  
+     |           ::#::::::::@       ::::::::::::  @  : ::    : @ ::::@:::: :  
+     |           ::#::::::::@       ::::::::::::  @  : ::    : @ ::::@:::: :  
+     |           ::#::::::::@       ::::::::::::  @  : ::    : @ ::::@:::: :  
+     |           ::#::::::::@       ::::::::::::  @  : ::    : @ ::::@:::: :  
+   0 +----------------------------------------------------------------------->MB
+     0                                                                   10.73
+
+Number of snapshots: 66
+ Detailed snapshots: [5, 11 (peak), 23, 39, 45, 56]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        132,176            1,728                0             0        1,728
+  2        225,344            1,248                0             0        1,248
+  3        377,552            1,792                0             0        1,792
+  4        495,296            1,536                0             0        1,536
+  5        622,528            1,296                0             0        1,296
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6        710,128            4,656                0             0        4,656
+  7        847,320            3,848            1,024             8        2,816
+  8        963,216           11,856            8,236           100        3,520
+  9      1,841,920          879,744            3,668            76      876,000
+ 10      1,914,352          879,872            3,668            76      876,128
+ 11      2,065,016        1,025,656            4,532            84    1,021,040
+00.44% (4,532B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.44% (4,532B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 12      2,173,680        1,024,672            3,668            76    1,020,928
+ 13      2,295,280        1,024,672            3,668            76    1,020,928
+ 14      2,416,880        1,024,672            3,668            76    1,020,928
+ 15      2,538,480        1,024,672            3,668            76    1,020,928
+ 16      2,660,080        1,024,672            3,668            76    1,020,928
+ 17      2,781,680        1,024,672            3,668            76    1,020,928
+ 18      2,903,280        1,024,672            3,668            76    1,020,928
+ 19      3,024,880        1,024,672            3,668            76    1,020,928
+ 20      3,146,480        1,024,672            3,668            76    1,020,928
+ 21      3,268,080        1,024,672            3,668            76    1,020,928
+ 22      3,371,456        1,024,672            3,668            76    1,020,928
+ 23      3,518,544          879,840            3,668            76      876,096
+00.42% (3,668B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.42% (3,668B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 24      4,391,096            7,288            3,668            76        3,544
+ 25      4,792,616          408,360            3,668            76      404,616
+ 26      4,956,880          553,248            3,668            76      549,504
+ 27      5,078,384          553,344            3,668            76      549,600
+ 28      5,175,664          553,344            3,668            76      549,600
+ 29      5,297,264          553,344            3,668            76      549,600
+ 30      5,418,864          553,344            3,668            76      549,600
+ 31      5,540,464          553,344            3,668            76      549,600
+ 32      5,662,064          553,344            3,668            76      549,600
+ 33      5,783,664          553,344            3,668            76      549,600
+ 34      5,905,264          553,344            3,668            76      549,600
+ 35      6,026,864          553,344            3,668            76      549,600
+ 36      6,148,464          553,344            3,668            76      549,600
+ 37      6,264,000          553,344            3,668            76      549,600
+ 38      6,408,872          408,472            3,668            76      404,728
+ 39      6,937,312          936,768            3,668            76      933,024
+00.39% (3,668B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.39% (3,668B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40      7,465,896          408,472            3,668            76      404,728
+ 41      7,666,928          607,616            3,668            76      603,872
+ 42      7,870,264          408,408            3,668            76      404,664
+ 43      8,271,504            7,184            3,668            76        3,440
+ 44      8,593,352          328,744            3,668            76      325,000
+ 45      8,909,448          644,840            3,668            76      641,096
+00.57% (3,668B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.57% (3,668B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46      9,056,240          789,664            3,668            76      785,920
+ 47      9,227,560          790,744            4,532            84      786,128
+ 48      9,361,320          790,744            4,532            84      786,128
+ 49      9,470,760          790,744            4,532            84      786,128
+ 50      9,543,720          790,744            4,532            84      786,128
+ 51      9,616,680          790,744            4,532            84      786,128
+ 52      9,689,640          790,744            4,532            84      786,128
+ 53      9,762,600          790,744            4,532            84      786,128
+ 54      9,835,560          790,744            4,532            84      786,128
+ 55      9,908,520          790,744            4,532            84      786,128
+ 56      9,981,480          790,744            4,532            84      786,128
+00.57% (4,532B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.57% (4,532B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57     10,054,440          790,744            4,532            84      786,128
+ 58     10,127,400          790,744            4,532            84      786,128
+ 59     10,200,360          790,744            4,532            84      786,128
+ 60     10,273,320          790,744            4,532            84      786,128
+ 61     10,346,280          790,744            4,532            84      786,128
+ 62     10,508,232          644,888            3,668            76      641,144
+ 63     10,824,376          328,792            3,668            76      325,048
+ 64     10,925,448          328,792            3,668            76      325,048
+ 65     11,247,072            7,168            3,668            76        3,424
